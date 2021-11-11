@@ -1,0 +1,125 @@
+.hero {
+  width: 90vw;
+  max-width: $max-width;
+  margin: 0 auto;
+  margin-top: 70px;
+  height: 60vh;
+
+  .hero-container {
+    width: 100%;
+    position: relative;
+    height: 60vh;
+    background-color: royalblue;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+  }
+  .hero-container::after {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $black-light;
+    z-index: 1;
+    content: "";
+    opacity: 0.5;
+  }
+  .hero-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100%;
+    .title {
+      color: $black;
+      font-size: $font-xl;
+      text-align: center;
+      width: 60%;
+      margin: 0 auto;
+      line-height: $font-xl * 1.5;
+      font-weight: 700;
+      text-transform: capitalize;
+      color: $white;
+    }
+    .subtitle {
+      text-align: center;
+      width: 70%;
+      margin: 0 auto;
+      color: $white;
+      font-weight: 500;
+      font-size: $font-primary;
+      line-height: $font-md;
+    }
+    button {
+      text-align: center;
+      display: block;
+      width: 120px;
+      margin: 25px auto;
+      padding: 8px 0;
+      font-family: $font-main;
+      font-size: $font-primary;
+      font-weight: 600;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border: transparent;
+      transition: 0.3s ease-in-out;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -ms-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: $black;
+      color: $white-dark;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin-top: 0px;
+    width: 100%;
+    background-color: salmon;
+    position: relative;
+    overflow: hidden;
+    height: 50vh;
+  }
+  .hero-container {
+    width: 100%;
+    background-color: red;
+    height: 100%;
+  }
+  .hero-info {
+    inset: 0;
+
+    height: 100% !important;
+  }
+  .title {
+    font-size: $font-md !important;
+    width: 100% !important;
+    line-height: normal !important;
+    padding-top: 20%;
+  }
+  .subtitle {
+    width: 100% !important;
+    font-size: $font-sm !important;
+    font-weight: 300 !important;
+  }
+}
