@@ -1,0 +1,104 @@
+.latest-products {
+  background-color: whitesmoke;
+  margin-top: 70px;
+  padding-bottom: 70px;
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+
+  .latest-product-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0 auto;
+
+    .title {
+      width: 100%;
+      color: $black;
+      margin-left: 10px;
+    }
+    .card {
+      width: 23%;
+      margin: 25px 5px;
+      background-color: $white;
+      margin-top: 20px;
+      padding-bottom: 30px;
+      max-height: 350px;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      overflow: hidden;
+      .card-info {
+        background-color: $white;
+        padding: 10px 10px;
+
+        .card-price {
+          display: flex;
+          justify-content: space-between;
+          padding: 5px 10px;
+          .price {
+            font-weight: 500;
+            text-decoration: line-through;
+          }
+          .after-discount {
+            text-decoration: none;
+          }
+        }
+        .product-name {
+          font-size: $font-sm * 1.1;
+          text-transform: capitalize;
+          text-align: left;
+          padding: 5px 10px;
+        }
+        .buy-btn {
+          padding: 6px;
+          width: 90px;
+          margin: 10px 010px;
+          background-color: $brown;
+          border: transparent;
+          color: $white;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+        }
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        height: 250px;
+      }
+    }
+
+    .card:hover {
+      box-shadow: $shadow;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .latest-products {
+    .latest-product-container {
+      .card {
+        width: 45%;
+        margin: 25px auto;
+        height: 100%;
+        max-height: 370px;
+        img {
+          width: 100%;
+          margin: 0 auto;
+        }
+        .price {
+          font-size: $font-sm;
+        }
+      }
+    }
+  }
+}

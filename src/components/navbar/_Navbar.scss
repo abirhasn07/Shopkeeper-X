@@ -86,7 +86,7 @@ form {
   height: 100%;
   .cart-value {
     position: absolute;
-    color: yellow;
+    color: $brown;
     font-size: $font-md;
     font-weight: 600;
   }
@@ -96,7 +96,7 @@ form {
   .nav {
     width: 100%;
     justify-content: space-around;
-    background-color: salmon;
+    background-color: $brown;
     z-index: 9999;
     .hidden {
       display: block;
